@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#F8F8F8] pt-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="bg-[#F8F8F8] py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Título de la sección -->
     <h2 class="text-2xl font-bold mb-8 text-center md:text-left">{{ props.title }}</h2>
 
@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, withDefaults } from 'vue'
 import ProductCard from '@/components/ProductCard.vue' // Asume que ProductCard acepta una prop 'product'
 import ShowMeAllTheProducts from './ShowMeAllTheProducts.vue' // Mantenemos este componente
 
@@ -39,8 +39,14 @@ interface Product {
 
 // --- Definición de Props ---
 // Definimos las propiedades que este componente aceptará
-const props = defineProps<{
-  title: string // Título para la sección (ej. "Productos recomendados")
-  products: Product[] // Array de objetos de producto
-}>()
+const props = withDefaults(
+  defineProps<{
+    title: string // Título para la sección (ej. "Productos recomendados")
+    products: Product[] // Array de objetos de producto
+    gray_background?: boolean
+  }>(),
+  {
+    gray_background: true,
+  },
+)
 </script>
