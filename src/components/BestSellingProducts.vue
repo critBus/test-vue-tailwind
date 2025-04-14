@@ -1,5 +1,5 @@
 <template>
-  <ProductsSection title="Productos más Vendidos" :products="products" />
+  <ProductsSection title="Productos más Vendidos" :products="products" :gray_background="false" />
 </template>
 
 <script setup lang="ts">
