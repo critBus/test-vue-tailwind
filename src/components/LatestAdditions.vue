@@ -1,5 +1,5 @@
 <template>
-  <ProductsSection title="Productos recomendados" :products="recommendedProducts" />
+  <ProductsSection title="Últimos Añadidos" :products="products" />
 </template>
 
 <script setup lang="ts">
@@ -13,7 +13,7 @@ import rico_drato from '@/assets/products/img/rico_drato.png'
 import ProductsSection from './ProductsSection.vue'
 
 // Datos de ejemplo (reemplazar con datos reales)
-const recommendedProducts = ref([
+const products = ref([
   {
     id: 1,
     name: 'Galletas Integrales con Semillas de Chía sin cáscaras (400 g)',
