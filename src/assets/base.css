@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+/* Carga de la fuente */
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: url('../assets/categories/RobotoCondensed-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

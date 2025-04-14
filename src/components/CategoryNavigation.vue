@@ -32,10 +32,10 @@
     <div class="mt-2 px-4 flex justify-center">
       <a
         to="/categorias"
-        class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-800 py-1"
+        class="inline-flex items-center gap-1 text-[12px] leading-100% text-gray-700 hover:text-gray-900 no-underline py-1 custom-link roboto-condensed-bold"
       >
         Ver todos los productos
-        <img :src="arrowIcon" alt="" class="h-3 w-3" />
+        <img :src="arrowIcon" alt="" class="h-3 w-3 align-middle" />
       </a>
     </div>
   </div>
@@ -135,5 +135,20 @@ function getImageUrl(name: string): string {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0%;
   vertical-align: middle;
+}
+/* Opcional: Si necesitas cargar Roboto Condensed manualmente */
+
+.custom-link {
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: none !important; /* Elimina subrayado por defecto */
+}
+
+/* Estilos personalizados */
+.roboto-condensed-bold {
+  font-family: 'RobotoCondensed-Bold', sans-serif !important;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: none !important;
 }
 </style>
