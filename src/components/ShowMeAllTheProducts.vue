@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2 px-4 flex justify-center">
+  <div class="my-8 px-4 flex justify-center">
     <a
       to="/categorias"
       class="inline-flex items-center justify-center gap-1 text-[12px] leading-100% hover:text-gray-900 no-underline py-1 custom-link roboto-condensed-bold"
@@ -14,3 +14,18 @@
 <script setup lang="ts">
 import arrowIcon from '@/assets/categories/Vector.svg'
 </script>
+<style scoped>
+.custom-link {
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: none !important; /* Elimina subrayado por defecto */
+}
+
+/* Estilos personalizados */
+.roboto-condensed-bold {
+  font-family: 'RobotoCondensed-Bold', sans-serif !important;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: none !important;
+}
+</style>

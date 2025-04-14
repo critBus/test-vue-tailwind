@@ -2,6 +2,7 @@
 import CategoryNavigation from './components/CategoryNavigation.vue'
 import HeaderComponent2 from './components/HeaderComponent2.vue'
 import RecommendedProducts from './components/RecommendedProducts.vue'
+import SecurePaymentImg from './components/SecurePaymentImg.vue'
 import TopBar from './components/TopBar.vue'
 </script>
 
@@ -10,6 +11,7 @@ import TopBar from './components/TopBar.vue'
   <TopBar />
   <CategoryNavigation />
   <RecommendedProducts />
+  <SecurePaymentImg />
   <RouterView />
 </template>
 

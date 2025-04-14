@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <img
-      :src="topBarImage"
+      :src="securePaymentImage"
       alt="Barra superior con oferta: Delivery GRATIS en pedidos desde $15"
       class="w-full h-auto block"
     />
@@ -9,5 +9,5 @@
 </template>
 
 <script setup lang="ts">
-import topBarImage from '@/assets/topbar/topbar.png'
+import securePaymentImage from '@/assets/secure_payment/secure_payment.png'
 </script>

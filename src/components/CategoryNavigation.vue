@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4">
+  <div class="pt-4">
     <div
       v-for="row_categorie in row_categories"
       :key="row_categorie.id"
@@ -126,20 +126,5 @@ function getImageUrl(name: string): string {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0%;
   vertical-align: middle;
-}
-/* Opcional: Si necesitas cargar Roboto Condensed manualmente */
-
-.custom-link {
-  letter-spacing: 0%;
-  vertical-align: middle;
-  text-decoration: none !important; /* Elimina subrayado por defecto */
-}
-
-/* Estilos personalizados */
-.roboto-condensed-bold {
-  font-family: 'RobotoCondensed-Bold', sans-serif !important;
-  letter-spacing: 0%;
-  vertical-align: middle;
-  text-decoration: none !important;
 }
 </style>
