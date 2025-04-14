@@ -12,7 +12,7 @@
         class="flex-shrink-0 flex flex-col items-center w-20 text-center no-underline group"
       >
         <div
-          class="bg-gray-100 rounded-full h-16 w-16 flex items-center justify-center mb-1 overflow-hidden group-hover:bg-gray-200"
+          class="bg-[#f7e5c1] rounded-full h-16 w-16 flex items-center justify-center mb-1 overflow-hidden group-hover:bg-gray-200"
         >
           <img
             :src="getImageUrl(category.imageFile)"
@@ -32,10 +32,12 @@
     <div class="mt-2 px-4 flex justify-center">
       <a
         to="/categorias"
-        class="inline-flex items-center gap-1 text-[12px] leading-100% text-gray-700 hover:text-gray-900 no-underline py-1 custom-link roboto-condensed-bold"
+        class="inline-flex items-center justify-center gap-1 text-[12px] leading-100% hover:text-gray-900 no-underline py-1 custom-link roboto-condensed-bold"
       >
-        Ver todos los productos
-        <img :src="arrowIcon" alt="" class="h-3 w-3 align-middle" />
+        <span class="mr-2">Ver todos los productos</span>
+        <div class="bg-[#d0cbcb] rounded-full p-1">
+          <img :src="arrowIcon" alt="" class="h-2 w-2 align-middle" />
+        </div>
       </a>
     </div>
   </div>
