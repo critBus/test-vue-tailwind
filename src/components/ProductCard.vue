@@ -1,48 +1,31 @@
 <template>
-  <div class="bg-white rounded-lg shadow-md p-4">
-    <!-- Imagen del producto -->
-    <img :src="product.image" alt="Imagen del producto" class="w-full h-48 object-cover mb-4" />
-
-    <!-- Detalles del producto -->
-    <div class="flex justify-between items-center mb-2">
-      <h2 class="text-lg font-semibold">{{ product.name }}</h2>
-      <span v-if="product.discountPercentage" class="bg-yellow-500 text-white px-2 py-1 rounded"
-        >-{{ product.discountPercentage }}%</span
-      >
+  <div class="relative inline-block bg-white shadow-md rounded-lg">
+    <div class="p-4 flex flex-row gap-1">
+      <div class="relative inline-block">
+        <img class="block w-full h-auto" :src="product.image" alt="Paquete de agua Niagara" />
+        <span
+          class="absolute bottom-0 right-0 mb-2 mr-2 z-10 bg-[#FAFAFA] bg-opacity-90 text-[#655F5F] text-[10px] font-medium px-3 py-1 rounded-md"
+        >
+          Mercadito TSO
+        </span>
+      </div>
     </div>
 
-    <!-- Precio original y precio con descuento -->
-    <div class="mb-4">
-      <del class="text-gray-500">${{ product.originalPrice }}</del>
-      <span class="text-green-600 font-bold ml-2">${{ product.price }}</span>
-    </div>
-
-    <!-- Botones de cantidad y agregar al carrito -->
-    <div class="flex items-center space-x-4">
-      <!-- Botón para disminuir la cantidad -->
-      <button
-        @click="quantity = Math.max(quantity - 1, 1)"
-        class="bg-gray-200 hover:bg-gray-300 p-2 rounded"
+    <div class="absolute top-0 left-0 flex flex-col space-y-1 z-10">
+      <div
+        class="bg-[#FBDDE5] px-2.5 py-1 rounded-r-lg shadow flex flex-row items-center justify-center"
       >
-        <img src="@/assets/products/icons/less.svg" alt="Restar" class="h-5 w-5" />
-      </button>
+        <img src="@/assets/products/icons/tag.svg" alt="Tag" class="h-4 w-4" />
+        <span class="text-red-500 text-xs font-bold"> -10% </span>
+      </div>
 
-      <!-- Mostrar cantidad actual -->
-      <span class="text-lg font-semibold">{{ quantity }}</span>
+      <div class="bg-[#FEF4DB] w-8 p-1 rounded-md shadow flex items-center justify-center">
+        <img src="@/assets/products/icons/select.svg" alt="Tag" class="h-4 w-4" />
+      </div>
 
-      <!-- Botón para aumentar la cantidad -->
-      <button @click="quantity += 1" class="bg-gray-200 hover:bg-gray-300 p-2 rounded">
-        <img src="@/assets/products/icons/add.svg" alt="Agregar" class="h-5 w-5" />
-      </button>
-
-      <!-- Botón principal para agregar al carrito -->
-      <button
-        @click="addToCart"
-        class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded flex items-center space-x-2"
-      >
-        <img src="@/assets/products/icons/shopping-cart.svg" alt="Carrito" class="h-5 w-5" />
-        <span>Añadir</span>
-      </button>
+      <div class="bg-[#E5EAF0] w-8 p-1 rounded-md shadow flex items-center justify-center">
+        <img src="@/assets/products/icons/calendar-edit.svg" alt="Tag" class="h-4 w-4" />
+      </div>
     </div>
   </div>
 </template>
