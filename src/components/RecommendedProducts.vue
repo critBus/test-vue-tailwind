@@ -8,24 +8,7 @@
       <ProductCard v-for="product in recommendedProducts" :key="product.id" :product="product" />
     </div>
 
-    <!-- Botón para ver todos los productos -->
-    <div class="mt-8 flex justify-center md:justify-end">
-      <router-link
-        to="/productos"
-        class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded flex items-center space-x-2"
-      >
-        <span>Ver todos los productos</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </router-link>
-    </div>
+    <ShowMeAllTheProducts />
   </section>
 </template>
 
@@ -33,6 +16,11 @@
 import ProductCard from '@/components/ProductCard.vue'
 import { ref } from 'vue'
 import waterBottles from '@/assets/products/img/pomos-de-agua.png'
+import especias_refinidas from '@/assets/products/img/especias_refinidas.png'
+import molo_para_piza from '@/assets/products/img/molo_para_piza.png'
+import pasta_barbicue from '@/assets/products/img/pasta_barbicue.png'
+import rico_drato from '@/assets/products/img/rico_drato.png'
+import ShowMeAllTheProducts from './ShowMeAllTheProducts.vue'
 
 // Datos de ejemplo (reemplazar con datos reales)
 const recommendedProducts = ref([
@@ -45,6 +33,41 @@ const recommendedProducts = ref([
     image: waterBottles,
     freeShipping: true,
   },
-  // ... Otros productos (agregar más objetos aquí)
+  {
+    id: 1,
+    name: 'Galletas Integrales con Semillas de Chía sin cáscaras (400 g)',
+    price: 232.69,
+    originalPrice: 40.69,
+    discountPercentage: 10,
+    image: especias_refinidas,
+    freeShipping: true,
+  },
+  {
+    id: 1,
+    name: 'Galletas Integrales con Semillas de Chía sin cáscaras (400 g)',
+    price: 232.69,
+    originalPrice: 40.69,
+    discountPercentage: 10,
+    image: molo_para_piza,
+    freeShipping: true,
+  },
+  {
+    id: 1,
+    name: 'Galletas Integrales con Semillas de Chía sin cáscaras (400 g)',
+    price: 232.69,
+    originalPrice: 40.69,
+    discountPercentage: 10,
+    image: pasta_barbicue,
+    freeShipping: true,
+  },
+  {
+    id: 1,
+    name: 'Galletas Integrales con Semillas de Chía sin cáscaras (400 g)',
+    price: 232.69,
+    originalPrice: 40.69,
+    discountPercentage: 10,
+    image: rico_drato,
+    freeShipping: true,
+  },
 ])
 </script>
