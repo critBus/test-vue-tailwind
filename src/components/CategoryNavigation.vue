@@ -1,10 +1,12 @@
 <template>
   <div class="py-4">
     <div
+      v-for="row_categorie in row_categories"
+      :key="row_categorie.id"
       class="flex /* Activa Flexbox */ overflow-x-auto /* Permite scroll horizontal si el contenido se desborda */ whitespace-nowrap /* Evita que los items salten a la línea siguiente */ py-2 /* Padding vertical interno */ px-4 /* Padding horizontal para que no pegue a los bordes */ gap-4 /* Espacio entre cada item de categoría */ scrollbar-hide /* Opcional: Oculta la barra de scroll visualmente (requiere plugin o CSS) */"
     >
       <a
-        v-for="category in categories"
+        v-for="category in row_categorie.categories"
         :key="category.id"
         :to="category.link"
         class="flex-shrink-0 /* Evita que los items se encojan */ flex flex-col items-center w-20 /* Ancho fijo para cada item */ text-center no-underline /* Quita el subrayado del enlace */ group /* Para efectos hover si los añades */"
@@ -41,6 +43,10 @@
 import { ref } from 'vue'
 import arrowIcon from '@/assets/categories/Vector.svg' // Importa el icono de flecha
 
+interface RowCategory {
+  id: string
+  categories: Category[]
+}
 // Interfaz Category
 interface Category {
   id: string
@@ -48,39 +54,58 @@ interface Category {
   imageFile: string
   link: string
 }
-
-// Datos de categorías
-const categories = ref<Category[]>([
-  { id: 'carnicos', name: 'Cárnicos', imageFile: 'carnicos.png', link: '/categorias/carnicos' },
+const row_categories = ref<RowCategory[]>([
   {
-    id: 'pescados',
-    name: 'Pescados y M...',
-    imageFile: 'pescados y mariscos.png',
-    link: '/categorias/pescados',
-  }, // Ajusta el nombre si es más largo
-  { id: 'huevos', name: 'Huevos y Láct...', imageFile: 'huevos.png', link: '/categorias/huevos' }, // Ajusta el nombre
-  { id: 'agro', name: 'Del Agro', imageFile: 'del agro.png', link: '/categorias/agro' },
+    id: '1',
+    categories: [
+      { id: 'carnicos', name: 'Cárnicos', imageFile: 'carnicos.png', link: '/categorias/carnicos' },
+      {
+        id: 'pescados',
+        name: 'Pescados y M...',
+        imageFile: 'pescados y mariscos.png',
+        link: '/categorias/pescados',
+      },
+      {
+        id: 'huevos',
+        name: 'Huevos y Láct...',
+        imageFile: 'huevos.png',
+        link: '/categorias/huevos',
+      },
+      { id: 'agro', name: 'Del Agro', imageFile: 'del agro.png', link: '/categorias/agro' },
+      {
+        id: 'ferreteria',
+        name: 'Ferretería',
+        imageFile: 'ferreteria.png',
+        link: '/categorias/ferreteria',
+      },
+      {
+        id: 'helados',
+        name: 'Cakes, Helados y  Dulces',
+        imageFile: 'helados.png',
+        link: '/categorias/ferreteria',
+      },
+    ],
+  },
   {
-    id: 'infantiles',
-    name: 'Infantiles y Es...',
-    imageFile: 'infantiles y escolares.png',
-    link: '/categorias/infantiles',
-  }, // Ajusta el nombre
-  { id: 'bebidas', name: 'Bebidas', imageFile: 'bebidas.png', link: '/categorias/bebidas' },
-  { id: 'farmacia', name: 'Farmacia', imageFile: 'farmacia.png', link: '/categorias/farmacia' },
-  { id: 'buffet', name: 'Buffet', imageFile: 'buffet.png', link: '/categorias/buffet' },
-  {
-    id: 'electro',
-    name: 'Electro',
-    imageFile: 'electrodomesticos.png',
-    link: '/categorias/electro',
-  }, // Añadida
-  {
-    id: 'ferreteria',
-    name: 'Ferretería',
-    imageFile: 'ferreteria.png',
-    link: '/categorias/ferreteria',
-  }, // Añadida
+    id: '2',
+    categories: [
+      {
+        id: 'infantiles',
+        name: 'Infantiles y Es...',
+        imageFile: 'infantiles y escolares.png',
+        link: '/categorias/infantiles',
+      }, // Ajusta el nombre
+      { id: 'bebidas', name: 'Bebidas', imageFile: 'bebidas.png', link: '/categorias/bebidas' },
+      { id: 'farmacia', name: 'Farmacia', imageFile: 'farmacia.png', link: '/categorias/farmacia' },
+      { id: 'buffet', name: 'Buffet', imageFile: 'buffet.png', link: '/categorias/buffet' },
+      {
+        id: 'electro',
+        name: 'Electro',
+        imageFile: 'electrodomesticos.png',
+        link: '/categorias/electro',
+      },
+    ],
+  },
 ])
 
 // Función para obtener URL de imagen
