@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BestSellingProducts from './components/BestSellingProducts.vue'
 import CategoryNavigation from './components/CategoryNavigation.vue'
+import FooterSection from './components/FooterSection.vue'
 import HeaderComponent2 from './components/HeaderComponent2.vue'
 import LatestAdditions from './components/LatestAdditions.vue'
 import RecommendedProducts from './components/RecommendedProducts.vue'
@@ -20,6 +21,7 @@ import TopBar from './components/TopBar.vue'
   <LatestAdditions />
   <ShippingCuba />
   <Subscriptions />
+  <FooterSection />
   <RouterView />
 </template>
 
