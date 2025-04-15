@@ -2,7 +2,37 @@
 /* Carga de la fuente */
 @font-face {
   font-family: 'RobotoCondensed-Bold';
-  src: url('../assets/categories/RobotoCondensed-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/RobotoCondensed-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+.custom-link {
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: none !important; /* Elimina subrayado por defecto */
+}
+
+/* Estilos personalizados */
+.roboto-condensed-bold {
+  font-family: 'RobotoCondensed-Bold', sans-serif !important;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: none !important;
+}
+
+.roboto {
+  font-family: 'Roboto' !important;
+}
+.roboto-bold {
+  font-family: 'Roboto-Bold' !important;
 }

@@ -5,6 +5,8 @@ import HeaderComponent2 from './components/HeaderComponent2.vue'
 import LatestAdditions from './components/LatestAdditions.vue'
 import RecommendedProducts from './components/RecommendedProducts.vue'
 import SecurePaymentImg from './components/SecurePaymentImg.vue'
+import ShippingCuba from './components/ShippingCuba.vue'
+import Subscriptions from './components/SubscriptionsSection.vue'
 import TopBar from './components/TopBar.vue'
 </script>
 
@@ -16,6 +18,8 @@ import TopBar from './components/TopBar.vue'
   <SecurePaymentImg />
   <BestSellingProducts />
   <LatestAdditions />
+  <ShippingCuba />
+  <Subscriptions />
   <RouterView />
 </template>
 

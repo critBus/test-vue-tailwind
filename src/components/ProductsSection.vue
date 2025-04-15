@@ -2,10 +2,10 @@
   <section
     :class="[
       props.gray_background ? 'bg-[#F8F8F8]' : 'bg-white',
-      'py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+      'pt-6 pb-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
     ]"
   >
-    <!-- Título de la sección -->
+    <!-- Título de la sección  bg-[#F8F8F8]-->
     <h2 class="text-2xl font-bold mb-8 text-center md:text-left">{{ props.title }}</h2>
 
     <!-- Lista de productos -->

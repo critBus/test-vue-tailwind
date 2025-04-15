@@ -14,18 +14,4 @@
 <script setup lang="ts">
 import arrowIcon from '@/assets/categories/Vector.svg'
 </script>
-<style scoped>
-.custom-link {
-  letter-spacing: 0%;
-  vertical-align: middle;
-  text-decoration: none !important; /* Elimina subrayado por defecto */
-}
-
-/* Estilos personalizados */
-.roboto-condensed-bold {
-  font-family: 'RobotoCondensed-Bold', sans-serif !important;
-  letter-spacing: 0%;
-  vertical-align: middle;
-  text-decoration: none !important;
-}
-</style>
+<style scoped></style>
