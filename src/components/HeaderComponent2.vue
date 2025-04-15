@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden md:flex md:flex-row md:justify-between p-2">
+  <div class="hidden lg:flex lg:flex-row lg:justify-between p-2">
     <div class="flex flex-row ml-4 items-center">
       <img src="/src/assets/header/TSOTienda.png" alt="Logo Recortado" class="h-8 w-auto" />
       <div class="flex flex-row ml-4 items-center">
@@ -15,8 +15,8 @@
       <input
         type="text"
         id="search-input"
-        placeholder="Busca chuleta de cerdo"
-        class="h-full grow px-3 border border-gray-300 rounded-md text-xs font-normal font-roboto leading-snug text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-blue-500 shadow-md"
+        placeholder="Buscar"
+        class="h-full w-80 grow px-3 border border-gray-300 rounded-md text-xs font-normal font-roboto leading-snug text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-blue-500 shadow-md"
       />
       <!-- Botón -->
       <button
@@ -49,7 +49,7 @@
       </div>
     </div>
   </div>
-  <div class="md:hidden flex flex-col gap-2 p-2">
+  <div class="lg:hidden flex flex-col gap-2 p-2">
     <div class="flex place-content-between items-center">
       <img src="/src/assets/header/image 3.png" alt="Logo Recortado" class="h-8 w-auto" />
       <CurrencySelector />
