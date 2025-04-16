@@ -1,21 +1,36 @@
 <template>
-  <div class="carousel w-full">
+  <div class="carousel w-full relative">
     <!-- Slides dinámicos -->
     <div
       v-for="(image, index) in images"
       :key="index"
-      class="carousel-item relative w-full h-96"
+      class="carousel-item absolute w-full h-96"
       :class="{ hidden: currentSlide !== index }"
     >
       <img :src="image" class="w-full h-full object-cover" alt="Carousel image" />
       <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-        <button @click="prevSlide" class="bg-white/50 hover:bg-white rounded-sm w-10 h-10">
+        <button @click="prevSlide" class="bg-white/50 hover:bg-white w-10 h-10 rounded-sm">
           ❮
         </button>
-        <button @click="nextSlide" class="bg-white/50 hover:bg-white rounded-sm w-10 h-10">
+        <button @click="nextSlide" class="bg-white/50 hover:bg-white w-10 h-10 rounded-sm">
           ❯
         </button>
       </div>
+    </div>
+
+    <!-- Indicadores de navegación -->
+    <div
+      class="carousel-indicators absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3"
+    >
+      <button
+        v-for="(image, index) in images"
+        :key="`indicator-${index}`"
+        @click="currentSlide = index"
+        :class="[
+          'w-4 h-4 rounded-full cursor-pointer',
+          currentSlide === index ? 'bg-white' : 'bg-gray-400',
+        ]"
+      ></button>
     </div>
   </div>
 </template>
@@ -31,7 +46,7 @@ const images = [
 ]
 
 const currentSlide = ref(0)
-const intervalTime = 10 * 1000 // segundos
+const intervalTime = 5000 // 5 segundos
 let autoSlideInterval: number
 
 const nextSlide = () => {
