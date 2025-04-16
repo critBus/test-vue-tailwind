@@ -1,27 +1,28 @@
 <template>
-  <div class="pt-4">
+  <div class="">
     <div
       v-for="row_categorie in row_categories"
       :key="row_categorie.id"
-      class="flex overflow-x-auto whitespace-nowrap py-2 px-4 gap-4 scrollbar-hide"
+      class="flex overflow-x-auto whitespace-nowrap px-4 gap-4 scrollbar-hide h-52"
     >
       <a
         v-for="category in row_categorie.categories"
         :key="category.id"
         :to="category.link"
-        class="flex-shrink-0 flex flex-col items-center w-20 sm:w-48 text-center no-underline group"
+        class="flex-shrink-0 flex flex-col items-center w-20 sm:w-32 text-center no-underline group overflow-visible"
       >
-        <div
-          class="bg-[#f7e5c1] rounded-full h-16 w-16 sm:h-40 sm:w-40 flex items-center justify-center mb-1 overflow-hidden group-hover:bg-gray-200"
-        >
-          <img :src="getImageUrl(category.imageFile)" :alt="category.name" class="object-contain" />
+        <div class="flex items-center justify-center h-screen">
+          <div class="relative w-52 h-52">
+            <div
+              class="w-28 h-28 bg-[#FEF4DB] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></div>
+            <img
+              :src="getImageUrl(category.imageFile)"
+              alt="Verduras"
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40"
+            />
+          </div>
         </div>
-
-        <span
-          class="text-[10px] font-semibold leading-[1.2] uppercase text-gray-700 group-hover:text-gray-900 block w-full text-center truncate-text"
-        >
-          {{ category.name }}
-        </span>
       </a>
     </div>
     <ShowMeAllTheProducts />
