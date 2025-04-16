@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel w-full relative">
+  <div class="carousel w-full h-96 relative">
     <!-- Slides dinámicos -->
     <div
       v-for="(image, index) in images"

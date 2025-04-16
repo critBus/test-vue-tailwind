@@ -9,20 +9,16 @@
         v-for="category in row_categorie.categories"
         :key="category.id"
         :to="category.link"
-        class="flex-shrink-0 flex flex-col items-center w-20 text-center no-underline group"
+        class="flex-shrink-0 flex flex-col items-center w-20 sm:w-48 text-center no-underline group"
       >
         <div
-          class="bg-[#f7e5c1] rounded-full h-16 w-16 flex items-center justify-center mb-1 overflow-hidden group-hover:bg-gray-200"
+          class="bg-[#f7e5c1] rounded-full h-16 w-16 sm:h-40 sm:w-40 flex items-center justify-center mb-1 overflow-hidden group-hover:bg-gray-200"
         >
-          <img
-            :src="getImageUrl(category.imageFile)"
-            :alt="category.name"
-            class="h-8 w-8 object-contain"
-          />
+          <img :src="getImageUrl(category.imageFile)" :alt="category.name" class="object-contain" />
         </div>
 
         <span
-          class="text-[10px] font-semibold leading-[1.2] uppercase text-gray-700 group-hover:text-gray-900 block w-full text-center px-1 truncate-text"
+          class="text-[10px] font-semibold leading-[1.2] uppercase text-gray-700 group-hover:text-gray-900 block w-full text-center truncate-text"
         >
           {{ category.name }}
         </span>
@@ -65,7 +61,12 @@ const row_categories = ref<RowCategory[]>([
         imageFile: 'huevos.png',
         link: '/categorias/huevos',
       },
-      { id: 'agro', name: 'Del Agro', imageFile: 'del agro.png', link: '/categorias/agro' },
+      {
+        id: 'agro',
+        name: 'Del Agro',
+        imageFile: 'del agro.png',
+        link: '/categorias/agro',
+      },
       {
         id: 'ferreteria',
         name: 'Ferretería',
