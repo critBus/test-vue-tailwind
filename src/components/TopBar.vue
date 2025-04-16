@@ -9,7 +9,7 @@
     >
       <img :src="image" class="w-full h-full object-cover" alt="Carousel image" />
       <div
-        class="carousel-indicators absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3"
+        class="carousel-indicators absolute bottom-5 left-1/2 transform -translate-x-1/2 hidden sm:flex space-x-3"
       >
         <button
           v-for="(image, index) in images"
@@ -21,7 +21,9 @@
           ]"
         ></button>
       </div>
-      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <div
+        class="absolute left-5 right-5 top-1/2 hidden sm:flex -translate-y-1/2 transform justify-between"
+      >
         <button @click="prevSlide" class="bg-white/50 hover:bg-white w-10 h-10 rounded-sm">
           ❮
         </button>
