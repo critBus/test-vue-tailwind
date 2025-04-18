@@ -34,8 +34,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import ShowMeAllTheProducts from './ShowMeAllTheProducts.vue'
-import CategoryImageLink from './CategoryImageLink.vue'
+import ShowMeAllTheProducts from '@/components/home/ShowMeAllTheProducts.vue'
+import CategoryImageLink from '@/components/home/CategoryImageLink.vue'
 import { splitList } from '@/utils/arrayUtils'
 
 interface RowCategory {

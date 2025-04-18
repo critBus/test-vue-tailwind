@@ -21,7 +21,7 @@
 import IconCar from '@/assets/shipping_cuba/group.svg'
 import IconBag from '@/assets/shipping_cuba/bag.svg'
 import IconLocation from '@/assets/shipping_cuba/location-tick.svg'
-import InfoShipping from './InfoShipping.vue'
+import InfoShipping from '@/components/home/InfoShipping.vue'
 interface Info {
   icono: string
   title: string

@@ -10,7 +10,7 @@ import molo_para_piza from '@/assets/products/img/molo_para_piza.png'
 import pasta_barbicue from '@/assets/products/img/pasta_barbicue.png'
 import rico_drato from '@/assets/products/img/rico_drato.png'
 
-import ProductsSection from './ProductsSection.vue'
+import ProductsSection from '@/components/home/ProductsSection.vue'
 
 // Datos de ejemplo (reemplazar con datos reales)
 const recommendedProducts = ref([

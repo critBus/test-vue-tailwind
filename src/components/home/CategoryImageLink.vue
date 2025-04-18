@@ -34,7 +34,7 @@ const props = defineProps<{
 
 function getImageUrl(name: string): string {
   try {
-    return new URL(`../assets/categories/img/${name}`, import.meta.url).href
+    return new URL(`../../assets/categories/img/${name}`, import.meta.url).href
   } catch (e) {
     console.error(`Error loading image: ${name}`, e)
     return ''

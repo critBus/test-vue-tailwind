@@ -24,8 +24,8 @@
 
 <script setup lang="ts">
 import { defineProps, withDefaults } from 'vue'
-import ProductCard from '@/components/ProductCard.vue' // Asume que ProductCard acepta una prop 'product'
-import ShowMeAllTheProducts from './ShowMeAllTheProducts.vue' // Mantenemos este componente
+import ProductCard from '@/components/home/ProductCard.vue' // Asume que ProductCard acepta una prop 'product'
+import ShowMeAllTheProducts from '@/components/home/ShowMeAllTheProducts.vue' // Mantenemos este componente
 
 // --- Definición de Tipos (TypeScript) ---
 // Es buena práctica definir la estructura esperada para cada producto

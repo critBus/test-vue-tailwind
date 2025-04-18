@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import LatestAdditions from '@/components/LatestAdditions.vue'
-import LinkingYourPurchases from '@/components/LinkingYourPurchases.vue'
-import RecommendedProducts from '@/components/RecommendedProducts.vue'
-import SecurePaymentImg from '@/components/SecurePaymentImg.vue'
-import ShippingCuba from '@/components/ShippingCuba.vue'
-import Subscriptions from '@/components/SubscriptionsSection.vue'
-import TopBar from '@/components/TopBar.vue'
-import BestSellingProducts from '@/components/BestSellingProducts.vue'
-import CategoryNavigation from '@/components/CategoryNavigation.vue'
+import LatestAdditions from '@/components/home/LatestAdditions.vue'
+import LinkingYourPurchases from '@/components/home/LinkingYourPurchases.vue'
+import RecommendedProducts from '@/components/home/RecommendedProducts.vue'
+import SecurePaymentImg from '@/components/home/SecurePaymentImg.vue'
+import ShippingCuba from '@/components/home/ShippingCuba.vue'
+import Subscriptions from '@/components/home/SubscriptionsSection.vue'
+import TopBar from '@/components/home/TopBar.vue'
+import BestSellingProducts from '@/components/home/BestSellingProducts.vue'
+import CategoryNavigation from '@/components/home/CategoryNavigation.vue'
 </script>
 
 <template>
