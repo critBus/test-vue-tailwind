@@ -1,15 +1,15 @@
 <template>
-  <div class="relative w-full h-40 inline-block bg-white shadow-md rounded-lg">
-    <div class="p-2 h-full flex flex-row gap-1">
-      <div class="relative w-[40%] inline-block">
-        <img class="block w-full h-auto" :src="product.image" alt="Paquete de agua Niagara" />
+  <div class="relative w-full h-40 sm:h-80 sm:w-52 inline-block bg-white shadow-md rounded-lg">
+    <div class="p-2 h-full flex flex-row sm:flex-col sm:items-center gap-1">
+      <div class="relative w-[40%] sm:w-[80%] inline-block">
+        <img class="block w-full h-full" :src="product.image" alt="Paquete de agua Niagara" />
         <span
           class="absolute bottom-0 right-0 px-3 py-1 z-10 bg-[#FAFAFA] bg-opacity-90 text-[#655F5F] text-[10px] font-medium rounded-md"
         >
           Mercadito TSO
         </span>
       </div>
-      <div class="flex w-[60%] flex-col gap-2">
+      <div class="flex w-[60%] sm:w-full flex-col gap-2">
         <span class="font-semibold text-[#4E4949]">{{ product.name }}</span>
         <div class="flex flex-row gap-2">
           <span class="font-bold text-[17px]">${{ product.originalPrice }}</span>
