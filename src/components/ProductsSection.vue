@@ -1,25 +1,24 @@
 <template>
-  <section
-    :class="[
-      props.gray_background ? 'bg-[#F8F8F8]' : 'bg-white',
-      'pt-6 pb-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
-    ]"
-  >
-    <!-- Título de la sección  bg-[#F8F8F8]-->
-    <h2 class="text-2xl font-bold mb-8 text-center md:text-left">{{ props.title }}</h2>
+  <section :class="[props.gray_background ? 'bg-[#F8F8F8]' : 'bg-white']">
+    <div class="pt-6 pb-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Título de la sección  bg-[#F8F8F8]-->
+      <h2 class="text-2xl sm:text-3xl roboto-bold mb-8 text-center md:text-left">
+        {{ props.title }}
+      </h2>
 
-    <!-- Lista de productos -->
-    <div
-      v-if="products && props.products.length > 0"
-      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
-    >
-      <ProductCard v-for="product in props.products" :key="product.id" :product="product" />
-    </div>
-    <div v-else class="text-center text-gray-500 py-8">
-      No hay productos para mostrar en esta sección.
-    </div>
+      <!-- Lista de productos -->
+      <div
+        v-if="products && props.products.length > 0"
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      >
+        <ProductCard v-for="product in props.products" :key="product.id" :product="product" />
+      </div>
+      <div v-else class="text-center text-gray-500 py-8">
+        No hay productos para mostrar en esta sección.
+      </div>
 
-    <ShowMeAllTheProducts />
+      <ShowMeAllTheProducts />
+    </div>
   </section>
 </template>
 
