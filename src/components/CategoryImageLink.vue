@@ -1,21 +1,21 @@
 <template>
   <a
-    class="flex-shrink-0 flex flex-col items-center w-20 sm:w-32 text-center no-underline group overflow-visible"
+    class="flex-shrink-0 flex flex-col items-center text-center no-underline group overflow-visible"
   >
-    <div class="flex items-center justify-center">
-      <div class="flex flex-col">
-        <div class="relative w-32 h-32">
+    <div class="flex items-center justify-center overflow-visible">
+      <div class="flex flex-col overflow-visible">
+        <div class="relative w-24 h-24 overflow-visible">
           <div
-            class="w-28 h-28 bg-[#FEF4DB] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            class="w-16 h-16 sm:w-28 sm:h-28 bg-[#FEF4DB] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           ></div>
           <img
             :src="getImageUrl(props.img)"
             :alt="props.img"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 z-10"
           />
         </div>
         <span
-          class="text-[10px] roboto font-semibold leading-[1.2] uppercase text-gray-700 group-hover:text-gray-900 block w-full text-center truncate-text"
+          class="text-sm sm:text-[10px] roboto font-semibold leading-[1.2] uppercase text-gray-700 group-hover:text-gray-900 block w-20 sm:w-full text-center truncate-text"
         >
           {{ props.name }}
         </span>
@@ -41,3 +41,13 @@ function getImageUrl(name: string): string {
   }
 }
 </script>
+
+<style scoped>
+.truncate-text {
+  @apply overflow-hidden whitespace-nowrap;
+  text-overflow: ellipsis;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+</style>

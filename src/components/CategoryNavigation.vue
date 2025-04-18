@@ -1,28 +1,34 @@
 <template>
-  <div class="flex flex-col items-center justify-center">
-    <div
-      v-for="row_categorie in row_categories"
-      :key="row_categorie.id"
-      class="sm:hidden flex overflow-x-auto whitespace-nowrap px-4 gap-4 scrollbar-hide max-sm:h-52"
-    >
-      <CategoryImageLink
-        v-for="category in row_categorie.categories"
-        :key="category.id"
-        :to="category.link"
-        :img="category.imageFile"
-        :name="category.name"
-      />
+  <div class="overflow-visible">
+    <div class="sm:hidden ml-4 overflow-visible">
+      <div
+        v-for="row_categorie in row_categories"
+        :key="row_categorie.id"
+        class="sm:hidden flex overflow-x-auto whitespace-nowrap gap-1 max-sm:h-52 overflow-visible"
+      >
+        <CategoryImageLink
+          v-for="category in row_categorie.categories"
+          :key="category.id"
+          :to="category.link"
+          :img="category.imageFile"
+          :name="category.name"
+        />
+      </div>
+      <ShowMeAllTheProducts />
     </div>
-    <div class="max-sm:hidden flex flex-row flex-wrap max-sm:h-52">
-      <CategoryImageLink
-        v-for="category in all_categories"
-        :key="category.id"
-        :to="category.link"
-        :img="category.imageFile"
-        :name="category.name"
-      />
+
+    <div class="max-sm:hidden flex flex-col items-center justify-center">
+      <div class="flex flex-row flex-wrap max-sm:h-52">
+        <CategoryImageLink
+          v-for="category in all_categories"
+          :key="category.id"
+          :to="category.link"
+          :img="category.imageFile"
+          :name="category.name"
+        />
+      </div>
+      <ShowMeAllTheProducts />
     </div>
-    <ShowMeAllTheProducts />
   </div>
 </template>
 
