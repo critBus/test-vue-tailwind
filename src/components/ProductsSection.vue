@@ -11,7 +11,7 @@
     <!-- Lista de productos -->
     <div
       v-if="products && props.products.length > 0"
-      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
     >
       <ProductCard v-for="product in props.products" :key="product.id" :product="product" />
     </div>

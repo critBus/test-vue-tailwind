@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="absolute top-0 left-0 flex flex-col space-y-1 z-10">
+    <div class="absolute sm:mt-2 top-0 left-0 flex flex-col space-y-1 z-10">
       <div
         class="bg-[#FBDDE5] px-2.5 py-1 rounded-r-lg shadow flex flex-row items-center justify-center"
       >
@@ -55,13 +55,22 @@
         <span class="text-red-500 text-xs font-bold"> -10% </span>
       </div>
 
-      <div class="bg-[#FEF4DB] w-8 p-1 rounded-md shadow flex items-center justify-center">
+      <div class="bg-[#FEF4DB] max-sm:w-8 p-1 rounded-r-md shadow flex items-center justify-center">
         <img src="@/assets/products/icons/select.svg" alt="Tag" class="h-4 w-4" />
+        <span class="max-sm:hidden text-[#AC7B04] text-[12px] font-bold"> NUEVO </span>
       </div>
 
-      <div class="bg-[#E5EAF0] w-8 p-1 rounded-md shadow flex items-center justify-center">
+      <div
+        class="sm:hidden bg-[#E5EAF0] w-8 p-1 rounded-r-md shadow flex items-center justify-center"
+      >
         <img src="@/assets/products/icons/calendar-edit.svg" alt="Tag" class="h-4 w-4" />
       </div>
+    </div>
+
+    <div
+      class="absolute sm:mt-2 z-10 top-0 right-0 bg-[#E5EAF0] w-8 p-1 rounded-l-md shadow flex items-center justify-center"
+    >
+      <img src="@/assets/products/icons/calendar-edit.svg" alt="Tag" class="h-4 w-4" />
     </div>
   </div>
 </template>
