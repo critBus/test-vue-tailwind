@@ -17,7 +17,7 @@
       <ShowMeAllTheProducts />
     </div>
 
-    <div class="max-sm:hidden flex flex-col items-center justify-center">
+    <div class="max-sm:hidden mt-3 flex flex-col items-center justify-center">
       <div class="flex flex-row flex-wrap max-sm:h-52">
         <CategoryImageLink
           v-for="category in all_categories"

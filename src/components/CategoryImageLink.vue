@@ -4,9 +4,9 @@
   >
     <div class="flex items-center justify-center overflow-visible">
       <div class="flex flex-col overflow-visible">
-        <div class="relative w-24 h-24 overflow-visible">
+        <div class="relative w-24 h-24 sm:w-28 sm:h-28 overflow-visible">
           <div
-            class="w-16 h-16 sm:w-28 sm:h-28 bg-[#FEF4DB] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            class="w-16 h-16 sm:w-20 sm:h-20 bg-[#FEF4DB] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           ></div>
           <img
             :src="getImageUrl(props.img)"
