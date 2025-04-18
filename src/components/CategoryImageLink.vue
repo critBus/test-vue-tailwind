@@ -11,7 +11,7 @@
           <img
             :src="getImageUrl(props.img)"
             :alt="props.img"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 z-10"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40"
           />
         </div>
         <span

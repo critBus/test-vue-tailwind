@@ -4,7 +4,7 @@
       <div
         v-for="row_categorie in row_categories"
         :key="row_categorie.id"
-        class="sm:hidden flex overflow-x-auto whitespace-nowrap gap-1 max-sm:h-52 overflow-visible"
+        class="sm:hidden flex overflow-x-auto whitespace-nowrap gap-1 overflow-visible scrollbar-hide"
       >
         <CategoryImageLink
           v-for="category in row_categorie.categories"
