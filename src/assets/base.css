@@ -21,6 +21,10 @@
   src: url('../assets/fonts/SourceSansPro-Light.otf') format('truetype');
 }
 @font-face {
+  font-family: 'Source-Sans-Pro-Bold';
+  src: url('../assets/fonts/SourceSansPro-Bold.otf') format('truetype');
+}
+@font-face {
   font-family: 'Heebo';
   src: url('../assets/fonts/Heebo-Light.ttf') format('truetype');
 }
@@ -48,6 +52,14 @@
 
 .source-sans-pro {
   font-family: 'Source-Sans-Pro' !important;
+}
+.source-sans-pro-bold {
+  font-family: 'Source-Sans-Pro-Bold' !important;
+}
+.lg\:roboto-bold {
+  @media (width >= 64rem /* 1024px */) {
+    font-family: 'Roboto-Bold' !important;
+  }
 }
 .heebo {
   font-family: 'Heebo' !important;
