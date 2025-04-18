@@ -5,6 +5,7 @@ import CopyrightSection from './components/CopyrightSection.vue'
 import FooterSection from './components/FooterSection.vue'
 import HeaderComponent2 from './components/HeaderComponent2.vue'
 import LatestAdditions from './components/LatestAdditions.vue'
+import LinkingYourPurchases from './components/LinkingYourPurchases.vue'
 import RecommendedProducts from './components/RecommendedProducts.vue'
 import SecurePaymentImg from './components/SecurePaymentImg.vue'
 import ShippingCuba from './components/ShippingCuba.vue'
@@ -22,6 +23,7 @@ import TopBar from './components/TopBar.vue'
   <LatestAdditions />
   <ShippingCuba />
   <Subscriptions />
+  <LinkingYourPurchases />
   <FooterSection />
   <CopyrightSection />
   <RouterView />
