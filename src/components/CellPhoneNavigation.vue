@@ -5,15 +5,21 @@
         v-for="menu_button in buttons"
         :key="menu_button.name"
         type="button"
-        class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600"
+        :class="[
+          'inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 ',
+          menu_button.selected ? 'bg-[#FEE9B6]' : '',
+        ]"
       >
-        <img
-          :src="menu_button.icon"
-          alt=""
-          class="w-5 h-5 mb-2 text-gray-500 group-hover:text-blue-600"
-        />
+        <img :src="menu_button.icon" alt="" class="w-5 h-5 mb-2 group-hover:text-blue-600" />
 
-        <span class="text-sm text-gray-500 group-hover:text-blue-600">{{ menu_button.name }}</span>
+        <span
+          :class="[
+            'text-sm  group-hover:text-blue-600',
+            menu_button.selected ? 'text-[#624602]' : 'text-gray-500',
+          ]"
+        >
+          {{ menu_button.name }}</span
+        >
       </button>
     </div>
   </div>
