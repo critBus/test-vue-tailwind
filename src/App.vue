@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CellPhoneNavigation from './components/CellPhoneNavigation.vue'
 import CopyrightSection from './components/CopyrightSection.vue'
 import FooterSection from './components/FooterSection.vue'
 import HeaderComponent2 from './components/HeaderComponent2.vue'
@@ -9,6 +10,7 @@ import HeaderComponent2 from './components/HeaderComponent2.vue'
   <RouterView />
   <FooterSection />
   <CopyrightSection />
+  <CellPhoneNavigation />
 </template>
 
 <style scoped></style>
